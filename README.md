@@ -6,6 +6,40 @@ This exercise aims to allow students to practise generating random numbers from 
 ## Scenario & Task
 Given a list of 99 numbers from 1 to 100, one number is missing. Please provide your solution in "find_mssing" function to solve this puzzle.
 
+## Complete Code Below
+
+```py
+import random
+
+def gen_data():
+    '''
+    This is a function to generate a sequence of numbers(1-100) with 1 number randomly missing
+    '''
+    numbers = list(range(1, 100))
+    # The random package has a function called shuffle, like shuffling a deck of cards
+    random.shuffle(numbers)
+    numbers.pop()
+    random.shuffle(numbers)
+    return numbers
+
+# print(gen_data())
+
+def find_missing(sequence):
+    '''
+    solution below
+    '''
+    list = []
+    for n in range(1,100):
+        if n in sequence:
+            pass
+        else:
+            print('The input sequence is:')
+            print(sequence)
+            print('The missing number is',n)
+
+find_missing(gen_data())
+```
+
 ## Expected Output
 Output should look like this:
 
